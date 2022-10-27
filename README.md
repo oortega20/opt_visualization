@@ -22,6 +22,17 @@ Notice that because the gradient of the loss function with respect to $w$ is the
 
 ## Gradient Descent with Momentum
 
+Given a loss function $L$ with learning-rate $\lambda$ and momentum parameter $\gamma$ we can define the optimization procedure as follows:
+
+$$v_{t+1} = \gamma * v_{t} + \lambda \nabla_{w}$$
+
+$$w_{t+1} = w_{t} - v_{t+1}$$
+
+Substituting the expression for $v_{t+1}$ we get the following:
+$$= w_{t} - (\gamma * v_{t} + \lambda \nabla_{w})$$
+
+The value of $\gamma$ is typically between 0 and 1. Also notice that if we set $\gamma$ to 0 we end up with the same equation for gradient descent!
+
 ## Stochastic Gradient Descent with Nesterov Momentum
 
 ## RMSProp
