@@ -73,7 +73,7 @@ $$\Delta w_{t} = - (\lambda \frac{v_{t}}{\sqrt{s_{t} + \epsilon}} * \nabla_{w}(L
 
 $$w_{t+1} = w_{t} + \Delta w_{t}$$
 
-Again notice, how if $\beta_{1} = 1$ the equation reduces to RMSProp! Similarily, if $\beta_{2} = 1$ The formula reduces to Gradient descent with momentum with a new learning rate $\lambda_{\text{new}} = \frac{\lambda}{\sqrt{s_{t} + \epsilon}}$
+Notice how if $\beta_{1} = 1$ the equation reduces to RMSProp (take the time to math this out - definitely worth)! Similarily, if $\beta_{2} = 1$ The formula reduces to Gradient descent with momentum with a new learning rate $\lambda_{\text{new}} = \frac{\lambda}{\sqrt{s_{t} + \epsilon}}$
 
 Enjoy,
 
