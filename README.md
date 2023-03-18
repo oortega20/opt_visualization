@@ -35,7 +35,7 @@ The value of $\gamma$ is typically between 0 and 1. Also notice that if we set $
 
 ## Gradient Descent with Nesterov Momentum
 
-When performing gradient descent with the nesterov update term, the gradient term is not computed from the current position $w_{t}$ in the parameter space, but instead from a position $w_{\textrm{lookahead}} = w_{t} + \mu v_{t}$. This helps because even if the momentum term points in the wrong direction or overshoots the current step, the gradient can still "correct" in the same update step based on the location of the lookahead term.
+When performing gradient descent with the nesterov update term, the gradient term is not computed from the current position $w_{t}$ in the parameter space, but instead from a position $w_{\textrm{lookahead}} = w_{t} + \gamma v_{t}$. This helps because even if the momentum term points in the wrong direction or overshoots the current step, the gradient can still "correct" in the same update step based on the location of the lookahead term.
 
 
 Given a loss function $L$ with learning-rate $\lambda$ and momentum parameter $\gamma$ we can define the optimization procedure as follows:
