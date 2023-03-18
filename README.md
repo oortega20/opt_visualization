@@ -53,7 +53,7 @@ Given a loss function $L$ with learning-rate $\lambda$ and momentum parameter $\
 
 $$v_{t} = \gamma v_{t-1} + (1 - \gamma) * \nabla_{w}(L(w))^{2}$$ 
 
-$$\Delta w_{t} = - (\frac{\lambda}{\sqrt{v_{t}} + \epsilon} * \nabla_{w}(L(w)))$$
+$$\Delta w_{t} = - (\frac{\lambda}{\sqrt{v_{t}}} * \nabla_{w}(L(w)))$$
 
 $$w_{t+1} = w_{t} + \Delta w_{t}$$
 
@@ -69,7 +69,7 @@ $$v_{t} = \beta_{1} v_{t-1} - (1 - \beta_{1}) * \nabla_{w}(L(w))$$
 
 $$s_{t} = \beta_{2} * s_{t-1} - (1 - \beta_{2}) * \nabla_{w}(L(w))^{2}$$
 
-$$\Delta w_{t} = - (\lambda \frac{v_{t}}{\sqrt{s_{t}} + \epsilon} * \nabla_{w}(L(w)))$$
+$$\Delta w_{t} = - (\lambda \frac{v_{t}}{\sqrt{s_{t} + \epsilon}} * \nabla_{w}(L(w)))$$
 
 $$w_{t+1} = w_{t} + \Delta w_{t}$$
 
