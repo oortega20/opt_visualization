@@ -57,7 +57,7 @@ $$\Delta w_{t} = - (\frac{\lambda}{\sqrt{v_{t}}} * \nabla_{w}(L(w)))$$
 
 $$w_{t+1} = w_{t} + \Delta w_{t}$$
 
-Notice how the $v_{t}$ term will scale each corresponding parameter in $w$ according to a exponential moving average of the previous gradients. Here the $\epsilon$ parameter is used to avoid division by 0. 
+Notice how the $v_{t}$ term will scale each corresponding parameter in $w$ according to a exponential moving average of the previous gradients. 
 
 ## Adam
 
@@ -73,7 +73,8 @@ $$\Delta w_{t} = - (\lambda \frac{v_{t}}{\sqrt{s_{t} + \epsilon}} * \nabla_{w}(L
 
 $$w_{t+1} = w_{t} + \Delta w_{t}$$
 
-Notice how if $\beta_{1} = 1$ the equation reduces to RMSProp (take the time to math this out - definitely worth)! Similarily, if $\beta_{2} = 1$ The formula reduces to Gradient descent with momentum with a new learning rate $\lambda_{\text{new}} = \frac{\lambda}{\sqrt{s_{t} + \epsilon}}$
+Notice how if $\beta_{1} = 1$ the equation reduces to RMSProp (take the time to math this out - definitely worth)! Similarily, if $\beta_{2} = 1$ The formula reduces to Gradient descent with momentum with a new learning rate $\lambda_{\text{new}} = \frac{\lambda}{\sqrt{s_{t} + \epsilon}}$. Here the $\epsilon$ parameter is used to avoid division by 0. 
+
 
 Enjoy,
 
