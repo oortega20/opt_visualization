@@ -69,7 +69,11 @@ $$v_{t} = \beta_{1} v_{t-1} - (1 - \beta_{1}) * \nabla_{w}(L(w))$$
 
 $$s_{t} = \beta_{2} * s_{t-1} - (1 - \beta_{2}) * \nabla_{w}(L(w))^{2}$$
 
-$$\Delta w_{t} = - (\lambda \frac{v_{t}}{\sqrt{s_{t} + \epsilon}} * \nabla_{w}(L(w)))$$
+$$\hat{v}_{t} = \frac{v_{t}}{1 - \beta_{1}^{t}}$$
+
+$$\hat{s}_{t} = \frac{s_{t}}{1 - \beta_{2}^{t}}$$
+
+$$\Delta w_{t} = - (\lambda \frac{\hat{v}_{t}}{\sqrt{\hat{s}_{t} + \epsilon}} * \nabla_{w}(L(w)))$$
 
 $$w_{t+1} = w_{t} + \Delta w_{t}$$
 
